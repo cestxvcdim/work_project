@@ -23,9 +23,9 @@ def from_csv_to_json(csv_path, json_path):
 
     for item in data:
         if item['name'] not in children_data:
-            children_data[item['name']] = [item['text']]
+            children_data[item['name']] = [{'text': item['text']}]
         else:
-            children_data[item['name']].append(item['text'])
+            children_data[item['name']].append({'text': item['text']})
 
     result = {}
     current_id = 10
