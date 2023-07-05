@@ -46,7 +46,7 @@ def from_csv_to_json(csv_path, json_path):
             })
 
     result = {}
-    current_id = 10
+    current_id = 55
     # current_id = 1400
     # parent_id = 1154
 
