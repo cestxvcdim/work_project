@@ -1,8 +1,6 @@
 import csv
 import json
 
-from ktask_4.config import Config
-
 
 def from_csv_to_json(csv_path, json_path):
     with open(csv_path, 'r', encoding='utf-8') as fp:
@@ -61,5 +59,4 @@ def from_csv_to_json(csv_path, json_path):
         current_id += 1
 
     with open(json_path, 'w', encoding='utf-8') as fp:
-        json_data = json.dumps(result, ensure_ascii=False, indent=4)
-        fp.write(json_data)
+        json.dump(result, fp, ensure_ascii=False, indent=4)
